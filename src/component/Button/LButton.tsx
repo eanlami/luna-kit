@@ -1,8 +1,8 @@
 import React from "react";
-import './OrButton.scss';
+import './LButton.scss';
 import '../../base/type-style.scss';
 
-interface OrButtonProps { 
+interface LButtonProps { 
     text?: string;
     onClick?: () => void;
     disabled?: boolean;
@@ -16,7 +16,7 @@ interface OrButtonProps {
 
 }
 
-const OrButton: React.FC<OrButtonProps> = ({ 
+const LButton: React.FC<LButtonProps> = ({ 
         text,
         onClick,
         disabled = false,
@@ -47,4 +47,4 @@ const OrButton: React.FC<OrButtonProps> = ({
     );
 };
 
-export default OrButton;
+export default LButton;
