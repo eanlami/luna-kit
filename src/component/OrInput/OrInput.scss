@@ -1,0 +1,101 @@
+@import '../../base/style.scss';
+@import '../../base/type-style.scss';
+
+.field-input{
+    display: flex;
+    flex-direction: column;
+
+    span{
+       
+    }
+}
+.field-label{
+    background-color: $neutral-bg-1-default;
+    width: fit-content;
+    margin-left: 8px;
+    margin-bottom: -8px;
+    z-index: 2;
+    padding: $space0 $space0-5 ;
+}
+
+.color-input{
+    display: flex;
+    align-items: center;
+}
+.text-input{
+    border: 1px solid $neutral-border-6-default;
+    padding: $space1 $space2;
+    height: 32px;
+    border-radius: $radius1;
+    flex-grow: 1;
+    overflow: hidden;
+    
+
+    &:hover{
+        border: 1px solid $neutral-border-6-hover;
+    }
+
+    &:focus-visible{
+        appearance: none;
+        outline: 2px solid $neutral-border-focus-dark;
+    }
+}
+
+.color-picker{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    right: 32px;
+    width: 28px;
+    height: 32px;
+    padding: 0px;
+    border-radius: 32px;
+    border: none;
+    padding: 0px;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.color-picker::-webkit-color-swatch {
+    border-radius: 32px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  
+  }
+  .color-picker::-moz-color-swatch {
+    border-radius: 32px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .reset-div{
+    position: absolute;
+    right: 36px;
+    top: 4px;
+
+  }
+  .recent-colors{
+    margin-top: 8px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .recent-color-btn{
+    height: 16px;
+    width: 16px;
+    margin-left: 4px;
+    
+    border: solid 0px ;
+    border-radius: $circular;
+  }
+
+  .input-action{
+    position: relative;
+    width: 0px;
+
+  }

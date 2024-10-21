@@ -1,0 +1,84 @@
+@import '../../base/style.scss';
+
+.logs {
+    width: 100%;
+    background-color: $neutral-bg-1-default;
+    transition: height 0.3s ease-in-out;
+    border-radius: 20px;
+    padding: 0px;
+    box-sizing: border-box;
+    // gap: $space4;
+    display: flex;
+    flex-direction: column;
+
+   
+  }
+
+  .logs-item{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $neutral-border-7-default;
+    padding: $space4 $space0;
+    gap: $space8;
+
+    @media screen and (max-width: 600px){
+      flex-direction: column;
+      padding: $space4 $space4;
+      gap: $space2;
+   }
+
+  }
+
+  .logs-version{
+    background-color: $brand-bg-1-default;
+    color: $neutral-fg-10-default;
+    padding: $space0 $space2;
+    border-radius: $circular;
+
+    @media screen and (max-width: 600px){
+      width: fit-content;
+   }
+
+  }
+  
+
+  .logs-list-item{
+
+    padding: 0px 16px;
+    margin: 0px;
+    color: $neutral-fg-1-default;
+    
+  }
+  .logs-header{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+
+    @media screen and (max-width: 600px){
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+
+   }
+
+  }
+  
+  .logs-type{
+    background-color: $neutral-bg-3-default;
+    color: $neutral-fg-2-default;
+    padding: $space0 $space2;
+    border-radius: $circular;
+    width: fit-content;
+  }
+
+  .logs-list{
+    display: flex;
+    flex-direction: column;
+    gap: $space1;
+  }
+
+  .changes-list{
+    display: flex;
+    flex-direction: column;
+    gap: $space6;
+  }

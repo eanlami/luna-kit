@@ -1,0 +1,64 @@
+@import '../../base/style.scss';
+
+.or-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider-switch {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $neutral-bg-1-default;
+        outline:1px solid $neutral-border-2-default ;
+        transition: 0.4s;
+        border-radius: 34px;
+
+        &:hover{
+            background: $neutral-bg-1-hover;
+           
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            left: 4px; // جابه‌جایی اولیه handle
+            bottom: 4px;
+            background-color: $neutral-fg-5-default;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+    }
+
+    input:checked + .slider-switch {
+        background-color: $brand-bg-1-default;
+        outline: 1px solid $brand-border-1-default; // رنگ پس‌زمینه در حالت checked
+
+        &:hover { background: $brand-bg-1-hover;}
+    }
+
+    input:checked + .slider-switch:before {
+        transform: translateX(20px); // جابه‌جایی handle در حالت checked
+        background-color: $neutral-bg-1-default;
+
+        &:hover { background: $neutral-bg-1-hover;}
+    }
+}

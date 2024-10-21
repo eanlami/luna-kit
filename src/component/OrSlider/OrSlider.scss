@@ -1,0 +1,90 @@
+@import '../../base/style.scss';
+
+.slider-container {
+    appearance: none;
+    position: relative;
+    left: 0;
+    right: 0;
+
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: $circular;
+    position: relative;
+    left: 0;
+    right: 0;
+    outline: none; // حذف outline در حالت فوکوس
+
+    // استایل برای مقدار پر شده
+    &::-webkit-slider-runnable-track {
+        height: 4px;
+        border-radius: $circular;
+        background: linear-gradient(to right, $brand-bg-1-default 0%, $brand-bg-1-default var(--value), $neutral-bg-4-default var(--value), $neutral-bg-4-default 100%);
+    }
+
+    &:hover {
+        background-color: $neutral-bg-4-hover; 
+    }
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: $neutral-bg-1-default;
+    border: 4px solid $brand-border-1-default;
+    border-radius: $circular;
+    cursor: pointer;
+    position: relative; // برای قرارگیری در کنار تولتیپ
+    top: -8px;
+    z-index: 1; // برای نمایش در بالای پس‌زمینه
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, top 0.2s ease-in-out, border 0.2s ease-in-out;
+
+    &:hover{
+        width: 24px;
+        height: 24px;
+        top: -10px;
+        border: 2px solid $brand-border-1-default;
+        transition: width 0.2s ease-in-out, height 0.2s ease-in-out, top 0.2s ease-in-out, border 0.2;
+    }
+}
+
+.slider::-moz-range-thumb {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: $neutral-bg-1-default;
+    border: px solid $brand-border-1-default;
+    border-radius: $circular;
+    cursor: pointer;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    padding: $space3 $space1;
+}
+
+
+.slider-container {
+    position: relative; // برای قرارگیری صحیح تولتیپ
+}
+
+.tooltip {
+    position: absolute;
+    top: -8px; // فاصله از نوار لغزنده
+    transform: translateX(-50%); // مرکز کردن تولتیپ
+    background-color: $neutral-bg-10-default; // رنگ پس‌زمینه تولتیپ
+    color: rgb(255, 255, 255); // رنگ متن
+    padding: 5px 10px;
+    border-radius: 8px;
+    white-space: nowrap; // جلوگیری از شکسته شدن متن
+    z-index: 10; // قرار دادن تولتیپ در بالای سایر عناصر
+    transition: opacity 0.3s; // افکت نرمی برای نمایان شدن و ناپدید شدن
+    width: fit-content;
+}
+

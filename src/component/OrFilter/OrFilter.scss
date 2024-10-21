@@ -1,0 +1,118 @@
+@import '../../base/style.scss';
+
+.or-filter {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    z-index: 800;
+    position: sticky;
+    top: 0;
+    border-right: 1px solid $neutral-border-7-default;
+    transition: background-color 0.3s ease-in-out;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $neutral-bg-1-default;
+   
+
+
+    @media screen and (max-width: 1200px){
+        position: fixed;
+        left: 0px;
+    }
+
+    @media screen and (max-width: 600px){
+       position: fixed;
+       width: 100%;
+
+    }
+   
+}
+.filter-body{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 5;
+    background: $neutral-bg-1-default;
+    
+    
+
+    
+}
+
+.customize-section{
+    background: $neutral-bg-1-default;
+    padding: 24px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $neutral-border-7-default;
+    }
+
+.filter-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $space4 $space6;
+    gap: $space1;
+    border-bottom: 1px solid $neutral-border-7-default;
+    background-color: $neutral-bg-1-default;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+
+    div{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+.tab-body{
+    display: flex;
+    flex-direction: column;
+    gap: $space4;
+
+
+}
+
+.category-section{
+    padding: $space6;
+    display: flex;
+    flex-direction: column;
+    gap: $space2;
+    
+    
+}
+
+.checkbox-section{
+   
+}
+.backdrop{
+    background-color: #00000000;
+    transition: background-color 0.3s ease-in-out;
+
+    @media screen and (max-width: 1200px){
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00000075;
+        transition: background-color 0.3s ease-in-out;
+        
+    }
+
+    
+}
+
+.OrCheckboxFilter-body{
+    overflow: auto;
+    box-sizing: border-box;
+    height: 100%;
+    z-index: 4;
+    position: relative;
+    background-color: $neutral-bg-1-default;
+
+    
+}

@@ -1,0 +1,116 @@
+@import '../../base/style.scss';
+
+.OrSidebar-desktop{
+
+
+        height: 100vh ;
+        width: 80px;
+        min-width: 80px;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid $neutral-border-7-default;
+        overflow-x: hidden;
+        padding: $space4 $space2;
+        gap: $space0-5;
+        display: flex;
+        flex-direction: column;
+        overflow:hidden;
+        margin: 0;
+        box-sizing: border-box;
+        position: sticky;
+        top: 0; 
+      
+
+        @media screen and (max-width: 780px){
+            display: none;
+     
+         }
+}
+
+.sidebar-button{
+    background-color: transparent;
+    border: 0px solid transparent;
+    display: flex;
+    flex-direction: column;
+    width: 66px;
+    align-items: center;
+    gap: $space0-5;
+    cursor: pointer;
+
+        div{
+            &.icon-wrapper{
+                display: flex;
+                background-color: $neutral-bg-1-default;
+                width: 44px;
+                height: 44px;
+                justify-content: center;
+                align-items: center;
+                border-radius: $radius3 ;
+                transition: width 0.1s ease-in-out, background-color 0.2s ease-in-out;
+            }
+        }
+
+
+        &:hover{
+            div{
+                &.icon-wrapper{
+                    background-color: $neutral-bg-1-hover;
+                    width: 64px;
+                    height: 44px;
+                    transition: width 0.1s ease-in-out;
+                }
+            }
+        }
+    
+        &:active{
+            div{
+                &.icon-wrapper{
+                    background-color: $neutral-bg-1-press; 
+                    transition: width 0.1s ease-in-out;
+                }
+            }
+        }
+
+        div{
+            &.icon-wrapper{
+                &.active{
+                    background-color: $neutral-bg-1-select;
+                    transition: width 0.1s ease-in-out;
+                }
+            }
+        }
+}
+        
+    
+    
+
+    
+    
+ 
+
+    
+
+
+
+
+.main-container {
+    display: flex;
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1;
+}
+.sidebar-main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+}
+
+.sidebar-poduct-content{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+}

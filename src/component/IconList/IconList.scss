@@ -1,0 +1,335 @@
+@import '../../base/style.scss';
+
+.icon-body{
+    padding: $space0;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+
+    
+}
+
+.icon-list-main{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+
+    
+}
+
+.icon-list{
+    max-width: 1600px;
+  
+    height: fit-content;
+    padding: $space2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px);
+    width: 100%;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+
+    @media screen and (max-width: 480px){
+        grid-template-columns: repeat(auto-fill, 80px);
+        
+        }
+
+        @media screen and (max-width: 780px){
+                padding-bottom: 220px;
+     
+         }
+}
+
+.icon-view{
+   
+    width: 40px;
+    height: 40px;
+}
+.icon-wrapper{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.loading
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.error-state{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+// .svg-container svg {
+
+//     width: 40px;
+//     height: 40px;
+
+//     @media screen and (max-width: 480px){
+//         width: 32px;
+//     height: 32px;
+
+//     }
+//   }
+  
+  .icon-sidepanel-name{
+    text-align: left;
+    padding: $space4 $space0;
+    
+}
+
+.skelton{
+    animation: skeleton-loading 1s linear infinite alternate;
+    height: 80px;
+    width: 100%;
+    border-radius: 8px;
+}
+@keyframes skeleton-loading { 
+    0% {
+      background-color: hsl(0, 0%, 96%);
+    }
+    100% {
+      background-color: hsl(0, 0%, 91%);
+    }
+  }
+
+  .copy-flot-button{
+    position: relative;
+    top: 4px;
+    right: 4px;
+  }
+
+
+  @import '../../base/style.scss';
+
+.icon-shape-body{
+    padding: $space4;
+    display: flex;
+    max-width: 1400px;
+    width: 100%;
+    box-sizing: border-box;
+    
+    @media screen and (max-width: 480px){
+    padding: $space2;
+    }
+
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+    padding: 12px;
+    background-color: $neutral-bg-1-default;
+    border-radius: $radius3;
+    cursor: pointer;
+    gap: 8px;
+    transition: background-color 0.3s; 
+
+    @media screen and (max-width: 480px){
+        padding: $space1;
+
+    }
+
+    svg{
+        width: 40px;
+        height: 40px;
+        transition: width 0.2s, height 0.2s; 
+
+        @media screen and (max-width: 480px){
+            width: 32px;
+            height: 32px;
+    
+        }
+    }
+
+    &:hover{
+        background-color: $neutral-bg-1-hover;   
+        svg{
+       
+
+            @media screen and (max-width: 480px){
+                width: 32px;
+                height: 32px;
+        
+            }
+        } 
+    }
+    &:active{
+        background-color: $neutral-bg-2-press;
+    }
+    
+}
+
+
+.flot-button{
+    position: relative;
+    top: 0px;
+    right: -10px;
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+   
+    button{
+        position: absolute;
+        top: 0px;
+    }
+}
+.item.selected {
+    outline: 2px solid blue; // رنگ یا استایل دلخواه
+  }
+
+.side-panel{
+
+    width: 320px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    border-left: 1px solid $neutral-border-7-default;
+    transition: background-color 0.3s ease-in-out;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    background-color: $neutral-bg-1-default;
+
+    @media screen and (max-width: 780px){
+        position: fixed;
+        top: 0px;
+        height: 100vh;
+        width: 100%;
+        
+     }
+
+}
+.side-panel-item{
+    z-index: 2;
+    background: $neutral-bg-1-default;
+    
+    padding: 16px 24px;
+    gap: 24px;
+   
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $neutral-border-7-default;
+
+}
+
+.sidepabel-svg-container{
+    padding: 0px;
+    background-color: $neutral-bg-4-default;
+    border-radius: $radius3;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    svg{
+        width: 24px;
+        height: 24px;
+    }
+    
+}
+.side-panel-item-body{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+
+    span{
+        flex-grow: 1;
+    }
+}
+
+.side-panel-body{
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.dowload-button-box{
+    border-top: 1px solid $neutral-border-7-default ;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+
+    
+    button{
+        width: 100%;
+    }
+}
+
+.svg-code{
+
+    padding: $space6;
+}
+.svg-code-box{
+    border: 1px solid $neutral-border-7-default;
+    border-radius: $radius2;
+    overflow-y: auto;
+    padding: $space2;
+    background-color: $neutral-bg-3-default;
+   
+}
+.single-download-box{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    button{
+        width: 100%;
+    }
+
+}
+
+.side-panel-body-shape{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+}
+
+.svg-preview{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $neutral-bg-4-default;
+    border-radius: $radius3;
+
+    svg{
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.icon-name{
+    text-align: center;
+    color: rgb(119, 119, 119);
+}

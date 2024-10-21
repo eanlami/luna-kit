@@ -1,0 +1,61 @@
+@import '../../base/style.scss';
+
+.menu {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0px;
+    height: 0px;
+    width: 100%;
+    background-color: $neutral-bg-1-default;
+    transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    z-index: 5;
+    border-radius: 20px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-sizing: border-box;
+
+
+  
+  
+    &.open {
+      padding: 24px;
+      height: 300px; /* یا یک مقدار بزرگ‌تر از محتوای واقعی */
+      transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    }
+  }
+
+
+  .menu-body{
+    display: flex;
+    flex-direction: column;
+    gap: $space2;
+    justify-content: center;
+
+  }
+
+  .menu-item{
+    background-color: $neutral-bg-1-default;
+    padding: $space2 $space2;
+    cursor: pointer;
+    border-radius: $radius2;
+    display: flex;
+    gap: $space2;
+    
+    
+
+    a{
+      color: $neutral-fg-1-default;
+      text-decoration: none;
+    }
+
+    &:hover{
+      background-color: $neutral-bg-1-hover;
+    }
+  }
+  
+  .menu-icon{
+    width: 24px;
+    height: 24px;
+  }
+
