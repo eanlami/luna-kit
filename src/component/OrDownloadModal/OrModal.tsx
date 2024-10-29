@@ -1,8 +1,7 @@
 // Modal.tsx
 import React from 'react';
 import './OrModal.scss';
-import OrButton from '../OrButton/OrButton';
-import Icon from '../../assets/Icon';
+import LButton from '../Button/LButton';
 
 interface ModalProps {
   title?: string;
@@ -29,12 +28,12 @@ const Modal: React.FC<ModalProps> = ({
             {title}
           </span>
 
-          <OrButton
+          <LButton
           layout='icon'
           appearance='outline'
           variant='secondary'
           size='md'
-          icon={<Icon.cross/>}
+          
           onClick={onClose}
           />
 
